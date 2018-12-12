@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter_app/MyScaffold.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,17 +10,21 @@ class MyApp extends StatelessWidget {
     //final wordPair = new WordPair.random();
     return new MaterialApp(
       title: '你好',
-      theme: new ThemeData(
-        primaryColor: Colors.amber
-      ),
-      home: new Scaffold(
-       /* appBar: new AppBar(
-          title: new Text('欢迎来到Flutter'),
-        ),*/
-        body: new Center(
-          //child: new Text('Hello World'),
-          child: new RandomWords(),
-        ),
+      theme: new ThemeData(primaryColor: Colors.amber),
+      home: new MyScaffold(),
+     //home: new MainScaffold(),
+
+    );
+  }
+}
+
+class MainScaffold extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      body: new Center(
+        //child: new Text("Hello world"),
+        child: new RandomWords(),
       ),
     );
   }
