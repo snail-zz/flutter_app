@@ -1,4 +1,5 @@
 # flutter_app
 
-这是学习flutter的第一个hello world项目
+学习flutter 例子，参照官方教程学习代码示例
+
 
