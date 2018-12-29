@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter_app/Detail.dart';
+import 'package:flutter_app/MyAnimationMain.dart';
+import 'package:flutter_app/MyRouteMain.dart';
 import 'package:flutter_app/MyScaffold.dart';
+import 'package:flutter_app/MyScaffoldMain.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,9 +15,13 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: '你好',
       theme: new ThemeData(primaryColor: Colors.amber),
-      home: new MyScaffold(),
-     //home: new MainScaffold(),
-
+      //  home: new MyScaffold(),
+      //home: new MyAnimationMain(),
+      home: new MyScaffoldMain(),
+      //home: new MainScaffold(),
+      routes: <String, WidgetBuilder>{
+       // '/detail': (BuildContext context) => new Detail()
+      },
     );
   }
 }
